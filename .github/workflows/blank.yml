@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true  # Initialize submodules
+          fetch-depth: 0  # Fetch all history for all submodules
 
       - name: Initialize submodules
         run: git submodule update --init --recursive
@@ -37,6 +38,7 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
   test:
+    needs: lint
     name: Run Tests
     runs-on: ubuntu-latest
     steps:
@@ -44,6 +46,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true  # Initialize submodules
+          fetch-depth: 0  # Fetch all history for all submodules
 
       - name: Initialize submodules
         run: git submodule update --init --recursive
@@ -63,6 +66,7 @@ jobs:
           pytest
 
   build:
+    needs: test
     name: Build Docker Image
     runs-on: ubuntu-latest
     steps:
@@ -70,6 +74,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true  # Initialize submodules
+          fetch-depth: 0  # Fetch all history for all submodules
 
       - name: Initialize submodules
         run: git submodule update --init --recursive
