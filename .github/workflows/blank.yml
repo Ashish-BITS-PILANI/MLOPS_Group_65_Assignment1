@@ -71,9 +71,9 @@ jobs:
         run: |
           pip install torchvision  # Ensure torchvision is installed
 
-      - name: Install Ultralytics
-        run: |
-          pip install ultralytics==8.0.100  # Ensure the correct version of ultralytics is installed
+     # - name: Install Ultralytics
+      #  run: |
+       #   pip install ultralytics==8.0.20  # Ensure the correct version of ultralytics is installed
 
       - name: Install Jupyter Kernel
         run: |
