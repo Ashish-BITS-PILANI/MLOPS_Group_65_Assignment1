@@ -82,7 +82,9 @@ jobs:
         run: |
           if [ ! -f /home/nic/workspace/Mlops/M_H_D/Military_Object_Detection/archive/KIIT-MiTA/KIIT-MiTA.yml ]; then
             echo "File KIIT-MiTA.yml not found!"
-            exit 1
+            # Add a step to create or copy the file if it does not exist
+            # For example, you can copy a template file or create a new file with default content
+            cp /path/to/template/KIIT-MiTA.yml /home/nic/workspace/Mlops/M_H_D/Military_Object_Detection/archive/KIIT-MiTA/KIIT-MiTA.yml
           fi
 
       - name: Execute Jupyter Notebook
