@@ -65,7 +65,11 @@ jobs:
           pip install -r requirements.txt
           pip install nbconvert
           pip install "numpy<2"
-      
+
+      - name: Install Ultralytics
+        run: |
+          pip install ultralytics==8.0.20  # Ensure the correct version of ultralytics is installed
+
       - name: Install Jupyter Kernel
         run: |
           python -m ipykernel install --user --name=python3
