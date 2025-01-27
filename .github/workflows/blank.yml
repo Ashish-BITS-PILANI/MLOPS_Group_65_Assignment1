@@ -64,6 +64,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install nbconvert
+      
+      - name: Install Jupyter Kernel
+        run: |
+          python -m ipykernel install --user --name=python3
 
       - name: Execute Jupyter Notebook
         run: |
