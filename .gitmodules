@@ -1,0 +1,3 @@
+[submodule "Military_Object_Detection"]
+  path = Military_Object_Detection
+  url = https://github.com/Ashish-BITS-PILANI/MLOPS_Group_65_Assignment1
