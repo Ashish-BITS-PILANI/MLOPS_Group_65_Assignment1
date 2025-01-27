@@ -68,7 +68,7 @@ jobs:
 
       - name: Execute Jupyter Notebook
         run: |
-          jupyter nbconvert --to notebook --execute "/Users/asverma2/Downloads/military-object-detection-recognition-yolov11 (1).ipynb" --output result.ipynb
+          jupyter nbconvert --to notebook --execute "https://github.com/Ashish-BITS-PILANI/MLOPS_Group_65_Assignment1/blob/main/military-object-detection-recognition-yolov11.ipynb" --output result.ipynb
 
 
   build:
