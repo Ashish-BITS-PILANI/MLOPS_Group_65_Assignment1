@@ -78,18 +78,11 @@ jobs:
       - name: Install Jupyter Kernel
         run: |
           python -m ipykernel install --user --name=python3
-      - name: Check for KIIT-MiTA.yml file
-        run: |
-          if [ ! -f /home/nic/workspace/Mlops/M_H_D/Military_Object_Detection/archive/KIIT-MiTA/KIIT-MiTA.yml ]; then
-            echo "File KIIT-MiTA.yml not found!"
-            # Add a step to create or copy the file if it does not exist
-            # For example, you can copy a template file or create a new file with default content
-            cp /path/to/template/KIIT-MiTA.yml /home/nic/workspace/Mlops/M_H_D/Military_Object_Detection/archive/KIIT-MiTA/KIIT-MiTA.yml
-          fi
+
 
       - name: Execute Jupyter Notebook
         run: |
-          jupyter nbconvert --to html --execute "military-object-detection-recognition-yolov11.ipynb" --output result.html 
+          jupyter nbconvert --to html --execute "military-object-detection-recognition-yolov11_updated.ipynb" --output result.html 
 
   build:
     needs: test
