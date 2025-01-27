@@ -78,6 +78,12 @@ jobs:
       - name: Install Jupyter Kernel
         run: |
           python -m ipykernel install --user --name=python3
+      - name: Check for KIIT-MiTA.yml file
+        run: |
+          if [ ! -f /home/nic/workspace/Mlops/M_H_D/Military_Object_Detection/archive/KIIT-MiTA/KIIT-MiTA.yml ]; then
+            echo "File KIIT-MiTA.yml not found!"
+            exit 1
+          fi
 
       - name: Execute Jupyter Notebook
         run: |
