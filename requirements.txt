@@ -1,4 +1,4 @@
-ultralytics==8.0.100
+ultralytics
 torch==1.13.1
 opencv-python>=4.6.0
 Pillow==9.0.1
