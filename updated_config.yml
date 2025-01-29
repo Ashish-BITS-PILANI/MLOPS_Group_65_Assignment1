@@ -7,6 +7,6 @@ names:
 - Tank
 - Vehicle
 nc: 7
-test: /archive/KIIT-MiTA/test/images
-train: /archive/KIIT-MiTA/train/images
-val: /archive/KIIT-MiTA/valid/images
+test: /test/images
+train: /train/images
+val: /valid/images
